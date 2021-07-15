@@ -1,18 +1,29 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'ChatterBox' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+platform :ios, '10.0'
 
-  # Pods for ChatterBox
+target 'AwesomeProject' do
+  config = use_native_modules!
 
-platform :ios, ‘10.0’
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
 
-# Add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
+  target 'AwesomeProjectTests' do
+    inherit! :complete
+    # Pods for testing
+  end
 
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+   use_flipper!()
 
+  post_install do |installer|
+    react_native_post_install(installer)
+  end
 end
