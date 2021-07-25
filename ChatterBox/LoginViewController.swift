@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTextFieldDelegates()
+        
         
     }
     
@@ -47,6 +49,35 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgetPasswordButtonTapped(_ sender: UIButton) {
+    }
+    
+    //MARK: - SETUP
+    
+    private func setupTextFieldDelegates(){
+        
+        emailTextField.addTarget(self, action: #selector(textfieldDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textfieldDidChange), for: .editingChanged)
+        repeatPasswordTextfield.addTarget(self, action: #selector(textfieldDidChange), for: .editingChanged)
+    }
+    
+    @objc func textfieldDidChange(_textField: UITextField) {
+        
+        updatePlaceholderLabel(textField: _textField)
+    }
+    
+    
+    private func updatePlaceholderLabel(textField: UITextField){
+        
+        switch textField {
+        case emailTextField:
+            emailLabelOutlet.text = textField.hasText ? "Email" : ""
+            
+        case passwordTextField:
+            passwordLabelOutlet.text = textField.hasText ? "Password" : ""
+            
+        default:
+            repeatLabelOutlet.text = textField.hasText ? "Repeat Password" : ""
+        }
     }
 }
 
