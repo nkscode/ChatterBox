@@ -100,12 +100,6 @@
                                     <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4A-pV-Qgo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8xE-wb-nS5">
-                                <rect key="frame" x="64" y="681" width="154" height="47"/>
-                                <state key="normal" title="Don't have an account">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-1k-hLF">
                                 <rect key="frame" x="289" y="681" width="61" height="47"/>
                                 <state key="normal" title="SignUp"/>
@@ -113,13 +107,18 @@
                                     <action selector="signUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VI-WM-a0l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH2-TV-K3h">
+                                <rect key="frame" x="63.999999999999986" y="681" width="198.66666666666663" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96848052740097046" green="0.95934049830351442" blue="0.86373259336485153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Qbe-we-jVW" firstAttribute="top" secondItem="nIv-vj-0ew" secondAttribute="bottom" constant="24" id="105-wr-NmW"/>
                             <constraint firstItem="t0f-W3-Tax" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.004" id="1th-SR-5xr"/>
-                            <constraint firstItem="8xE-wb-nS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="4LY-wz-ZXA"/>
                             <constraint firstItem="vbl-cg-8z9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.048" id="51M-wT-wfH"/>
                             <constraint firstItem="ux8-AN-eVF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.048" id="6SX-id-uKX"/>
                             <constraint firstItem="Qbe-we-jVW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7dy-gu-z2c"/>
@@ -141,34 +140,34 @@
                             <constraint firstItem="m7w-UB-YFL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ORz-rD-08d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSN-1k-hLF" secondAttribute="trailing" constant="64" id="PGn-fP-B0p"/>
                             <constraint firstItem="t0f-W3-Tax" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="PKh-vg-WgA"/>
-                            <constraint firstItem="fSN-1k-hLF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8xE-wb-nS5" secondAttribute="trailing" constant="8" symbolic="YES" id="PSn-k3-nwh"/>
                             <constraint firstItem="vbl-cg-8z9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="QAO-rb-e0W"/>
                             <constraint firstItem="jZm-sS-m0H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="QcQ-vf-GVg"/>
                             <constraint firstItem="EoX-q0-Phg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="SHu-yy-d8P"/>
                             <constraint firstItem="jZm-sS-m0H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.048" id="T3I-QF-54q"/>
-                            <constraint firstItem="8xE-wb-nS5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.064" id="TRV-Jz-Uym"/>
                             <constraint firstItem="MSZ-Bu-QRe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TS9-Jg-67f"/>
                             <constraint firstItem="t0f-W3-Tax" firstAttribute="top" secondItem="ux8-AN-eVF" secondAttribute="bottom" constant="5" id="UB3-yh-x7D"/>
                             <constraint firstItem="fSN-1k-hLF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.064" id="UEs-aP-ZIs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8xE-wb-nS5" secondAttribute="bottom" constant="8" id="Z6H-Ry-Nfs"/>
                             <constraint firstItem="vbl-cg-8z9" firstAttribute="top" secondItem="MSZ-Bu-QRe" secondAttribute="bottom" constant="5" id="azL-3o-yeM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oH2-TV-K3h" secondAttribute="bottom" constant="8" id="b3a-Id-WKC"/>
                             <constraint firstItem="MSZ-Bu-QRe" firstAttribute="top" secondItem="m7w-UB-YFL" secondAttribute="bottom" constant="24" id="bdb-En-J7d"/>
                             <constraint firstItem="ibu-1g-IjQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dGS-Lb-P0I"/>
                             <constraint firstItem="ibu-1g-IjQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="eNY-ml-uIG"/>
                             <constraint firstItem="EoX-q0-Phg" firstAttribute="top" secondItem="HG9-fu-5o0" secondAttribute="bottom" constant="5" id="fnw-Xk-JOf"/>
                             <constraint firstItem="jZm-sS-m0H" firstAttribute="top" secondItem="ibu-1g-IjQ" secondAttribute="bottom" constant="24" id="gqL-Q6-O8e"/>
+                            <constraint firstItem="oH2-TV-K3h" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.064" id="hNr-xj-Bsb"/>
                             <constraint firstItem="Fig-O2-H79" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hog-Yv-6pi"/>
                             <constraint firstItem="Qbe-we-jVW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.72" id="kpg-dR-SvD"/>
                             <constraint firstItem="ux8-AN-eVF" firstAttribute="top" secondItem="jZm-sS-m0H" secondAttribute="bottom" constant="5" id="kzn-lv-Ef2"/>
                             <constraint firstItem="ibu-1g-IjQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.004" id="mmb-Jr-9Sl"/>
                             <constraint firstItem="EoX-q0-Phg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.048" id="n3S-z3-f7a"/>
+                            <constraint firstItem="oH2-TV-K3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="oXi-LU-XFY"/>
                             <constraint firstItem="Fig-O2-H79" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.88" id="pV0-iT-OAz"/>
                             <constraint firstItem="m7w-UB-YFL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="pVJ-Bd-OSb"/>
+                            <constraint firstItem="oH2-TV-K3h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.48" id="q7j-SE-wnG"/>
                             <constraint firstItem="HG9-fu-5o0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="qJT-pN-hYV"/>
                             <constraint firstItem="ux8-AN-eVF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tEL-dx-bfZ"/>
                             <constraint firstItem="ibu-1g-IjQ" firstAttribute="top" secondItem="vbl-cg-8z9" secondAttribute="bottom" constant="5" id="uUa-PT-j0O"/>
                             <constraint firstItem="t0f-W3-Tax" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="un1-c9-P4R"/>
-                            <constraint firstItem="8xE-wb-nS5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.371981" id="v9J-fi-eDO"/>
                             <constraint firstItem="Fig-O2-H79" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="w5d-v1-gLQ"/>
                             <constraint firstItem="vbl-cg-8z9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yYj-A4-GVF"/>
                             <constraint firstItem="jZm-sS-m0H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yqQ-vA-e3S"/>
@@ -187,7 +186,7 @@
                         <outlet property="repeatPasswordTextfield" destination="ux8-AN-eVF" id="edf-2E-9dk"/>
                         <outlet property="resendEmailPasswordOutlet" destination="mty-zV-34h" id="cfU-Mo-CBP"/>
                         <outlet property="signUpButtonOutlet" destination="fSN-1k-hLF" id="03s-1x-QgE"/>
-                        <outlet property="signUpLabelOutlet" destination="8xE-wb-nS5" id="UuC-RC-dkG"/>
+                        <outlet property="signUpLabelOutlet" destination="oH2-TV-K3h" id="snl-CT-wX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,9 +196,6 @@
     </scenes>
     <resources>
         <image name="loginBtn" width="294" height="62"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

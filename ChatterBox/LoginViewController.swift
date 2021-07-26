@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailLabelOutlet: UILabel!
     @IBOutlet weak var passwordLabelOutlet: UILabel!
     @IBOutlet weak var repeatLabelOutlet: UILabel!
-    @IBOutlet weak var signUpLabelOutlet: UIButton!
+    @IBOutlet weak var signUpLabelOutlet: UILabel!
     
     @IBOutlet weak var repeatPasswordLineView: UIView!
     
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setupTextFieldDelegates()
-        
+        updateUIFor(login: true)
         
     }
     
@@ -45,10 +45,27 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        updateUIFor(login: false)
+        //need to change
     }
     
     
     @IBAction func forgetPasswordButtonTapped(_ sender: UIButton) {
+    }
+    
+    //MARK: -ANIMATION
+    
+    private func updateUIFor(login: Bool) {
+        
+        LoginButtonOutlet.setImage(UIImage(named: login ? "loginBtn" : "registerBtn"), for: .normal)
+        signUpButtonOutlet.setTitle(login ? "SignUp" : "Login", for: .normal)
+        signUpLabelOutlet.text = login ? "Don't have an account ?" : "Have an account ?"
+        
+        UIView.animate(withDuration: 0.5) {
+            self.repeatPasswordLineView.isHidden = login
+            self.repeatPasswordTextfield.isHidden = login
+            self.repeatLabelOutlet.isHidden = login
+        }
     }
     
     //MARK: - SETUP
